@@ -13,6 +13,22 @@ public class UtilsTest {
         new UtilsTest().testArrays();
     }
 
+    private static void testSorting() {
+
+        // Sorting Complete Array
+        Arrays.sort(new int[] {1, 5, 2, 0});
+        // Sorting a List
+        Collections.sort(Arrays.asList(1, 5, 2, 0));
+        // Sorting a Set
+        Set<Integer> descSortedIntegersSet = new LinkedHashSet<>(
+                Arrays.asList(new Integer[]
+                        {255, 200, 123, 89, 88, 66, 7, 5, 1}));
+        List<Integer> list = new ArrayList<>(descSortedIntegersSet);
+        Collections.sort(list, Comparator.naturalOrder());
+
+
+    }
+
     private static void testCollections() {
         List<Integer> collection = new ArrayList<>();
         Collections.addAll(collection, 11, 12, 13, 14);
@@ -61,6 +77,21 @@ public class UtilsTest {
 //        Collections.max(Collection, Comparator);
 //        Collections.min(Collection);
 //        Collections.min(Collection, Comparator);
+
+
+//        If you have a sorted array, then you may use a binary search algorithm which works faster than linear search:
+//        List<String> copy = new ArrayList<>(stringsToSearch);
+//        Collections.sort(copy);
+//        int index = Collections.binarySearch(copy, "f");
+
+        // только со списками
+        List<String> students = Arrays.asList("Foo", "Bar", "Baz", "Qux");
+        Collections.shuffle(students);
+        int seedValue = 10;
+        Collections.shuffle(students, new Random(seedValue));
+
+
+
 
     }
 
