@@ -5,6 +5,14 @@ import java.util.*;
 //Arrays
 //Collections
 
+/**
+ * Всегда старайтесь в методах вашей бизнес логики возвращать пустые коллекции
+ * вместо null значений, это избавляет от лишних null-проверок и делает код чище.
+ * Для этого в классе Collections есть несколько замечательных методов:
+ * Collections.emptyList();
+ * Collections.emptyMap();
+ * Collections.emptySet();
+ */
 public class UtilsTest {
 
     public static void main(String[] args) {
